@@ -21,8 +21,8 @@ const Home = () => {
   }
 
   const bubbleeStyle = () => {
-    let widthRatio = window.outerWidth / 1920;
-    let heightRatio = window.outerHeight / 1080;
+    const widthRatio = window.outerWidth / 1920;
+    const heightRatio = window.outerHeight / 1080;
 
     const style = {
       width: `${300 * widthRatio}px`,
