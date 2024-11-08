@@ -1,0 +1,56 @@
+.loading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+.afternoon {
+    background-image: url("../../../public/background_afternoon.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: rgb(136, 219, 251);
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+  }
+
+.night {
+    background-image: url("../../../public/background_night.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: rgb(4, 83, 151);
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+  }
+
+.speech-bubble {
+    position: absolute;
+    background: white;
+    border-radius: .4em;
+    padding: 10px;
+    top: 80%;
+    left: 48.7%;
+    transform: translate(-50%, -50%);
+    font-family: 'Consolas'; 
+    font-weight: 700;
+    border: 1px;
+    object-fit: scale-down;
+  }
+  
+.speech-bubble:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border: 10px solid transparent;
+    border-top-color: white;
+    border-bottom: 0;
+    margin-left: -10px;
+    margin-bottom: -10px;
+  }
