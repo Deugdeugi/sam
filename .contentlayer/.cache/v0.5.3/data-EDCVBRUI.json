@@ -1,5 +1,79 @@
 {
   "cacheItemsMap": {
+    "authors/default.mdx": {
+      "document": {
+        "name": "Hooram Seo",
+        "avatar": "/static/images/blogIcon.png",
+        "occupation": "SW Engineer",
+        "company": "LG Electronics",
+        "email": "hooram.seo@kakao.com",
+        "twitter": "https://twitter.com/Twitter",
+        "linkedin": "https://www.linkedin.com",
+        "github": "https://github.com\r",
+        "body": {
+          "raw": "\r\nMy name is Hooram Seo 😃",
+          "code": "var Component=(()=>{var h=Object.create;var r=Object.defineProperty;var l=Object.getOwnPropertyDescriptor;var w=Object.getOwnPropertyNames;var x=Object.getPrototypeOf,d=Object.prototype.hasOwnProperty;var g=(t,o)=>()=>(o||t((o={exports:{}}).exports,o),o.exports),f=(t,o)=>{for(var n in o)r(t,n,{get:o[n],enumerable:!0})},a=(t,o,n,i)=>{if(o&&typeof o==\"object\"||typeof o==\"function\")for(let e of w(o))!d.call(t,e)&&e!==n&&r(t,e,{get:()=>o[e],enumerable:!(i=l(o,e))||i.enumerable});return t};var _=(t,o,n)=>(n=t!=null?h(x(t)):{},a(o||!t||!t.__esModule?r(n,\"default\",{value:t,enumerable:!0}):n,t)),k=t=>a(r({},\"__esModule\",{value:!0}),t);var s=g((y,m)=>{m.exports=_jsx_runtime});var b={};f(b,{default:()=>u,frontmatter:()=>M});var c=_(s()),M={name:\"Hooram Seo\",avatar:\"/static/images/blogIcon.png\",occupation:\"SW Engineer\",company:\"LG Electronics\",email:\"hooram.seo@kakao.com\",twitter:\"https://twitter.com/Twitter\",linkedin:\"https://www.linkedin.com\",github:\"https://github.com\"};function p(t){let o={p:\"p\",...t.components};return(0,c.jsx)(o.p,{children:\"My name is Hooram Seo \\u{1F603}\"})}function u(t={}){let{wrapper:o}=t.components||{};return o?(0,c.jsx)(o,{...t,children:(0,c.jsx)(p,{...t})}):p(t)}return k(b);})();\n;return Component;"
+        },
+        "_id": "authors/default.mdx",
+        "_raw": {
+          "sourceFilePath": "authors/default.mdx",
+          "sourceFileName": "default.mdx",
+          "sourceFileDir": "authors",
+          "contentType": "mdx",
+          "flattenedPath": "authors/default"
+        },
+        "type": "Authors",
+        "readingTime": {
+          "text": "1 min read",
+          "minutes": 0.03,
+          "time": 1800,
+          "words": 6
+        },
+        "slug": "default",
+        "path": "authors/default",
+        "filePath": "authors/default.mdx",
+        "toc": []
+      },
+      "documentHash": "1732779642464",
+      "hasWarnings": false,
+      "documentTypeName": "Authors"
+    },
+    "authors/sparrowhawk.mdx": {
+      "document": {
+        "name": "Sparrow Hawk",
+        "avatar": "/static/images/sparrowhawk-avatar.jpg",
+        "occupation": "Wizard of Earthsea",
+        "company": "Earthsea",
+        "twitter": "https://twitter.com/sparrowhawk",
+        "linkedin": "https://www.linkedin.com/sparrowhawk\r",
+        "body": {
+          "raw": "\r\nAt birth, Ged was given the child-name Duny by his mother. He was born on the island of Gont, as a son of a bronzesmith. His mother died before he reached the age of one. As a small boy, Ged had overheard the village witch, his maternal aunt, using various words of power to call goats. Ged later used the words without an understanding of their meanings, to surprising effect.\r\n\r\nThe witch knew that using words of power effectively without understanding them required innate power, so she endeavored to teach him what little she knew. After learning more from her, he was able to call animals to him. Particularly, he was seen in the company of wild sparrowhawks so often that his \"use name\" became Sparrowhawk.\r\n",
+          "code": "var Component=(()=>{var m=Object.create;var o=Object.defineProperty;var l=Object.getOwnPropertyDescriptor;var p=Object.getOwnPropertyNames;var u=Object.getPrototypeOf,f=Object.prototype.hasOwnProperty;var g=(e,t)=>()=>(t||e((t={exports:{}}).exports,t),t.exports),k=(e,t)=>{for(var n in t)o(e,n,{get:t[n],enumerable:!0})},i=(e,t,n,s)=>{if(t&&typeof t==\"object\"||typeof t==\"function\")for(let r of p(t))!f.call(e,r)&&r!==n&&o(e,r,{get:()=>t[r],enumerable:!(s=l(t,r))||s.enumerable});return e};var x=(e,t,n)=>(n=e!=null?m(u(e)):{},i(t||!e||!e.__esModule?o(n,\"default\",{value:e,enumerable:!0}):n,e)),b=e=>i(o({},\"__esModule\",{value:!0}),e);var w=g((j,h)=>{h.exports=_jsx_runtime});var y={};k(y,{default:()=>d,frontmatter:()=>v});var a=x(w()),v={name:\"Sparrow Hawk\",avatar:\"/static/images/sparrowhawk-avatar.jpg\",occupation:\"Wizard of Earthsea\",company:\"Earthsea\",twitter:\"https://twitter.com/sparrowhawk\",linkedin:\"https://www.linkedin.com/sparrowhawk\"};function c(e){let t={p:\"p\",...e.components};return(0,a.jsxs)(a.Fragment,{children:[(0,a.jsx)(t.p,{children:\"At birth, Ged was given the child-name Duny by his mother. He was born on the island of Gont, as a son of a bronzesmith. His mother died before he reached the age of one. As a small boy, Ged had overheard the village witch, his maternal aunt, using various words of power to call goats. Ged later used the words without an understanding of their meanings, to surprising effect.\"}),(0,a.jsx)(t.p,{children:'The witch knew that using words of power effectively without understanding them required innate power, so she endeavored to teach him what little she knew. After learning more from her, he was able to call animals to him. Particularly, he was seen in the company of wild sparrowhawks so often that his \"use name\" became Sparrowhawk.'})]})}function d(e={}){let{wrapper:t}=e.components||{};return t?(0,a.jsx)(t,{...e,children:(0,a.jsx)(c,{...e})}):c(e)}return b(y);})();\n;return Component;"
+        },
+        "_id": "authors/sparrowhawk.mdx",
+        "_raw": {
+          "sourceFilePath": "authors/sparrowhawk.mdx",
+          "sourceFileName": "sparrowhawk.mdx",
+          "sourceFileDir": "authors",
+          "contentType": "mdx",
+          "flattenedPath": "authors/sparrowhawk"
+        },
+        "type": "Authors",
+        "readingTime": {
+          "text": "1 min read",
+          "minutes": 0.63,
+          "time": 37800,
+          "words": 126
+        },
+        "slug": "sparrowhawk",
+        "path": "authors/sparrowhawk",
+        "filePath": "authors/sparrowhawk.mdx",
+        "toc": []
+      },
+      "documentHash": "1732774269792",
+      "hasWarnings": false,
+      "documentTypeName": "Authors"
+    },
     "blog/code-sample.mdx": {
       "document": {
         "title": "Sample .md file",
@@ -272,6 +346,62 @@
       "hasWarnings": false,
       "documentTypeName": "Blog"
     },
+    "blog/Test.mdx": {
+      "document": {
+        "title": "Test",
+        "date": "2024-11-28T06:55:00.000Z",
+        "tags": [
+          "test"
+        ],
+        "lastmod": "2024-11-28T00:00:00.000Z",
+        "draft": false,
+        "summary": "Test",
+        "layout": "PostSimple",
+        "bibliography": "references-data.bib\r",
+        "body": {
+          "raw": "\r\n## Overview\r\n\r\nTest",
+          "code": "var Component=(()=>{var m=Object.create;var s=Object.defineProperty;var p=Object.getOwnPropertyDescriptor;var x=Object.getOwnPropertyNames;var u=Object.getPrototypeOf,v=Object.prototype.hasOwnProperty;var f=(t,e)=>()=>(e||t((e={exports:{}}).exports,e),e.exports),w=(t,e)=>{for(var n in e)s(t,n,{get:e[n],enumerable:!0})},o=(t,e,n,l)=>{if(e&&typeof e==\"object\"||typeof e==\"function\")for(let r of x(e))!v.call(t,r)&&r!==n&&s(t,r,{get:()=>e[r],enumerable:!(l=p(e,r))||l.enumerable});return t};var g=(t,e,n)=>(n=t!=null?m(u(t)):{},o(e||!t||!t.__esModule?s(n,\"default\",{value:t,enumerable:!0}):n,t)),_=t=>o(s({},\"__esModule\",{value:!0}),t);var c=f((y,i)=>{i.exports=_jsx_runtime});var j={};w(j,{default:()=>h,frontmatter:()=>b});var a=g(c()),b={title:\"Test\",date:\"2024-11-28T15:55:00\",lastmod:\"2024-11-28\",tags:[\"test\"],draft:!1,summary:\"Test\",layout:\"PostSimple\",bibliography:\"references-data.bib\"};function d(t){let e={a:\"a\",h2:\"h2\",p:\"p\",path:\"path\",span:\"span\",svg:\"svg\",...t.components};return(0,a.jsxs)(a.Fragment,{children:[(0,a.jsxs)(e.h2,{className:\"content-header\",id:\"overview\",children:[(0,a.jsx)(e.a,{\"aria-hidden\":\"true\",href:\"#overview\",tabIndex:\"-1\",children:(0,a.jsx)(a.Fragment,{children:(0,a.jsx)(e.span,{className:\"content-header-link\",children:(0,a.jsxs)(e.svg,{className:\"h-5 linkicon w-5\",fill:\"currentColor\",viewBox:\"0 0 20 20\",xmlns:\"http://www.w3.org/2000/svg\",children:[(0,a.jsx)(e.path,{d:\"M12.232 4.232a2.5 2.5 0 0 1 3.536 3.536l-1.225 1.224a.75.75 0 0 0 1.061 1.06l1.224-1.224a4 4 0 0 0-5.656-5.656l-3 3a4 4 0 0 0 .225 5.865.75.75 0 0 0 .977-1.138 2.5 2.5 0 0 1-.142-3.667l3-3Z\"}),(0,a.jsx)(e.path,{d:\"M11.603 7.963a.75.75 0 0 0-.977 1.138 2.5 2.5 0 0 1 .142 3.667l-3 3a2.5 2.5 0 0 1-3.536-3.536l1.225-1.224a.75.75 0 0 0-1.061-1.06l-1.224 1.224a4 4 0 1 0 5.656 5.656l3-3a4 4 0 0 0-.225-5.865Z\"})]})})})}),\"Overview\"]}),(0,a.jsx)(e.p,{children:\"Test\"})]})}function h(t={}){let{wrapper:e}=t.components||{};return e?(0,a.jsx)(e,{...t,children:(0,a.jsx)(d,{...t})}):d(t)}return _(j);})();\n;return Component;"
+        },
+        "_id": "blog/Test.mdx",
+        "_raw": {
+          "sourceFilePath": "blog/Test.mdx",
+          "sourceFileName": "Test.mdx",
+          "sourceFileDir": "blog",
+          "contentType": "mdx",
+          "flattenedPath": "blog/Test"
+        },
+        "type": "Blog",
+        "readingTime": {
+          "text": "1 min read",
+          "minutes": 0.015,
+          "time": 900,
+          "words": 3
+        },
+        "slug": "Test",
+        "path": "blog/Test",
+        "filePath": "blog/Test.mdx",
+        "toc": [
+          {
+            "value": "Overview",
+            "url": "#overview",
+            "depth": 2
+          }
+        ],
+        "structuredData": {
+          "@context": "https://schema.org",
+          "@type": "BlogPosting",
+          "headline": "Test",
+          "datePublished": "2024-11-28T06:55:00.000Z",
+          "dateModified": "2024-11-28T00:00:00.000Z",
+          "description": "Test",
+          "image": "/static/images/twitter-card.png",
+          "url": "https://tailwind-nextjs-starter-blog.vercel.app/blog/Test"
+        }
+      },
+      "documentHash": "1732776937192",
+      "hasWarnings": false,
+      "documentTypeName": "Blog"
+    },
     "blog/the-time-machine.mdx": {
       "document": {
         "title": "The Time Machine",
@@ -329,136 +459,6 @@
         }
       },
       "documentHash": "1732774269795",
-      "hasWarnings": false,
-      "documentTypeName": "Blog"
-    },
-    "authors/default.mdx": {
-      "document": {
-        "name": "Tails Azimuth",
-        "avatar": "/static/images/avatar.png",
-        "occupation": "Professor of Atmospheric Science",
-        "company": "Stanford University",
-        "email": "address@yoursite.com",
-        "twitter": "https://twitter.com/Twitter",
-        "linkedin": "https://www.linkedin.com",
-        "github": "https://github.com\r",
-        "body": {
-          "raw": "\r\nTails Azimuth is a professor of atmospheric sciences at the Stanford AI Lab. His research interests includes complexity modelling of tailwinds, headwinds and crosswinds.\r\n\r\nHe leads the clean energy group which develops 3D air pollution-climate models, writes differential equation solvers, and manufactures titanium plated air ballons. In his free time he bakes raspberry pi.\r\n\r\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque elit, tristique placerat feugiat ac, facilisis vitae arcu. Proin eget egestas augue. Praesent ut sem nec arcu pellentesque aliquet. Duis dapibus diam vel metus tempus vulputate.\r\n",
-          "code": "var Component=(()=>{var d=Object.create;var n=Object.defineProperty;var p=Object.getOwnPropertyDescriptor;var h=Object.getOwnPropertyNames;var f=Object.getPrototypeOf,g=Object.prototype.hasOwnProperty;var w=(e,t)=>()=>(t||e((t={exports:{}}).exports,t),t.exports),x=(e,t)=>{for(var s in t)n(e,s,{get:t[s],enumerable:!0})},o=(e,t,s,r)=>{if(t&&typeof t==\"object\"||typeof t==\"function\")for(let a of h(t))!g.call(e,a)&&a!==s&&n(e,a,{get:()=>t[a],enumerable:!(r=p(t,a))||r.enumerable});return e};var v=(e,t,s)=>(s=e!=null?d(f(e)):{},o(t||!e||!e.__esModule?n(s,\"default\",{value:e,enumerable:!0}):s,e)),b=e=>o(n({},\"__esModule\",{value:!0}),e);var l=w((q,c)=>{c.exports=_jsx_runtime});var _={};x(_,{default:()=>m,frontmatter:()=>y});var i=v(l()),y={name:\"Tails Azimuth\",avatar:\"/static/images/avatar.png\",occupation:\"Professor of Atmospheric Science\",company:\"Stanford University\",email:\"address@yoursite.com\",twitter:\"https://twitter.com/Twitter\",linkedin:\"https://www.linkedin.com\",github:\"https://github.com\"};function u(e){let t={p:\"p\",...e.components};return(0,i.jsxs)(i.Fragment,{children:[(0,i.jsx)(t.p,{children:\"Tails Azimuth is a professor of atmospheric sciences at the Stanford AI Lab. His research interests includes complexity modelling of tailwinds, headwinds and crosswinds.\"}),(0,i.jsx)(t.p,{children:\"He leads the clean energy group which develops 3D air pollution-climate models, writes differential equation solvers, and manufactures titanium plated air ballons. In his free time he bakes raspberry pi.\"}),(0,i.jsx)(t.p,{children:\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque elit, tristique placerat feugiat ac, facilisis vitae arcu. Proin eget egestas augue. Praesent ut sem nec arcu pellentesque aliquet. Duis dapibus diam vel metus tempus vulputate.\"})]})}function m(e={}){let{wrapper:t}=e.components||{};return t?(0,i.jsx)(t,{...e,children:(0,i.jsx)(u,{...e})}):u(e)}return b(_);})();\n;return Component;"
-        },
-        "_id": "authors/default.mdx",
-        "_raw": {
-          "sourceFilePath": "authors/default.mdx",
-          "sourceFileName": "default.mdx",
-          "sourceFileDir": "authors",
-          "contentType": "mdx",
-          "flattenedPath": "authors/default"
-        },
-        "type": "Authors",
-        "readingTime": {
-          "text": "1 min read",
-          "minutes": 0.45,
-          "time": 27000,
-          "words": 90
-        },
-        "slug": "default",
-        "path": "authors/default",
-        "filePath": "authors/default.mdx",
-        "toc": []
-      },
-      "documentHash": "1732774269792",
-      "hasWarnings": false,
-      "documentTypeName": "Authors"
-    },
-    "authors/sparrowhawk.mdx": {
-      "document": {
-        "name": "Sparrow Hawk",
-        "avatar": "/static/images/sparrowhawk-avatar.jpg",
-        "occupation": "Wizard of Earthsea",
-        "company": "Earthsea",
-        "twitter": "https://twitter.com/sparrowhawk",
-        "linkedin": "https://www.linkedin.com/sparrowhawk\r",
-        "body": {
-          "raw": "\r\nAt birth, Ged was given the child-name Duny by his mother. He was born on the island of Gont, as a son of a bronzesmith. His mother died before he reached the age of one. As a small boy, Ged had overheard the village witch, his maternal aunt, using various words of power to call goats. Ged later used the words without an understanding of their meanings, to surprising effect.\r\n\r\nThe witch knew that using words of power effectively without understanding them required innate power, so she endeavored to teach him what little she knew. After learning more from her, he was able to call animals to him. Particularly, he was seen in the company of wild sparrowhawks so often that his \"use name\" became Sparrowhawk.\r\n",
-          "code": "var Component=(()=>{var m=Object.create;var o=Object.defineProperty;var l=Object.getOwnPropertyDescriptor;var p=Object.getOwnPropertyNames;var u=Object.getPrototypeOf,f=Object.prototype.hasOwnProperty;var g=(e,t)=>()=>(t||e((t={exports:{}}).exports,t),t.exports),k=(e,t)=>{for(var n in t)o(e,n,{get:t[n],enumerable:!0})},i=(e,t,n,s)=>{if(t&&typeof t==\"object\"||typeof t==\"function\")for(let r of p(t))!f.call(e,r)&&r!==n&&o(e,r,{get:()=>t[r],enumerable:!(s=l(t,r))||s.enumerable});return e};var x=(e,t,n)=>(n=e!=null?m(u(e)):{},i(t||!e||!e.__esModule?o(n,\"default\",{value:e,enumerable:!0}):n,e)),b=e=>i(o({},\"__esModule\",{value:!0}),e);var w=g((j,h)=>{h.exports=_jsx_runtime});var y={};k(y,{default:()=>d,frontmatter:()=>v});var a=x(w()),v={name:\"Sparrow Hawk\",avatar:\"/static/images/sparrowhawk-avatar.jpg\",occupation:\"Wizard of Earthsea\",company:\"Earthsea\",twitter:\"https://twitter.com/sparrowhawk\",linkedin:\"https://www.linkedin.com/sparrowhawk\"};function c(e){let t={p:\"p\",...e.components};return(0,a.jsxs)(a.Fragment,{children:[(0,a.jsx)(t.p,{children:\"At birth, Ged was given the child-name Duny by his mother. He was born on the island of Gont, as a son of a bronzesmith. His mother died before he reached the age of one. As a small boy, Ged had overheard the village witch, his maternal aunt, using various words of power to call goats. Ged later used the words without an understanding of their meanings, to surprising effect.\"}),(0,a.jsx)(t.p,{children:'The witch knew that using words of power effectively without understanding them required innate power, so she endeavored to teach him what little she knew. After learning more from her, he was able to call animals to him. Particularly, he was seen in the company of wild sparrowhawks so often that his \"use name\" became Sparrowhawk.'})]})}function d(e={}){let{wrapper:t}=e.components||{};return t?(0,a.jsx)(t,{...e,children:(0,a.jsx)(c,{...e})}):c(e)}return b(y);})();\n;return Component;"
-        },
-        "_id": "authors/sparrowhawk.mdx",
-        "_raw": {
-          "sourceFilePath": "authors/sparrowhawk.mdx",
-          "sourceFileName": "sparrowhawk.mdx",
-          "sourceFileDir": "authors",
-          "contentType": "mdx",
-          "flattenedPath": "authors/sparrowhawk"
-        },
-        "type": "Authors",
-        "readingTime": {
-          "text": "1 min read",
-          "minutes": 0.63,
-          "time": 37800,
-          "words": 126
-        },
-        "slug": "sparrowhawk",
-        "path": "authors/sparrowhawk",
-        "filePath": "authors/sparrowhawk.mdx",
-        "toc": []
-      },
-      "documentHash": "1732774269792",
-      "hasWarnings": false,
-      "documentTypeName": "Authors"
-    },
-    "blog/Test.mdx": {
-      "document": {
-        "title": "Test",
-        "date": "2024-11-28T06:55:00.000Z",
-        "tags": [
-          "test"
-        ],
-        "lastmod": "2024-11-28T00:00:00.000Z",
-        "draft": false,
-        "summary": "Test",
-        "layout": "PostSimple",
-        "bibliography": "references-data.bib\r",
-        "body": {
-          "raw": "\r\n## Overview\r\n\r\nTest",
-          "code": "var Component=(()=>{var m=Object.create;var s=Object.defineProperty;var p=Object.getOwnPropertyDescriptor;var x=Object.getOwnPropertyNames;var u=Object.getPrototypeOf,v=Object.prototype.hasOwnProperty;var f=(t,e)=>()=>(e||t((e={exports:{}}).exports,e),e.exports),w=(t,e)=>{for(var n in e)s(t,n,{get:e[n],enumerable:!0})},o=(t,e,n,l)=>{if(e&&typeof e==\"object\"||typeof e==\"function\")for(let r of x(e))!v.call(t,r)&&r!==n&&s(t,r,{get:()=>e[r],enumerable:!(l=p(e,r))||l.enumerable});return t};var g=(t,e,n)=>(n=t!=null?m(u(t)):{},o(e||!t||!t.__esModule?s(n,\"default\",{value:t,enumerable:!0}):n,t)),_=t=>o(s({},\"__esModule\",{value:!0}),t);var c=f((y,i)=>{i.exports=_jsx_runtime});var j={};w(j,{default:()=>h,frontmatter:()=>b});var a=g(c()),b={title:\"Test\",date:\"2024-11-28T15:55:00\",lastmod:\"2024-11-28\",tags:[\"test\"],draft:!1,summary:\"Test\",layout:\"PostSimple\",bibliography:\"references-data.bib\"};function d(t){let e={a:\"a\",h2:\"h2\",p:\"p\",path:\"path\",span:\"span\",svg:\"svg\",...t.components};return(0,a.jsxs)(a.Fragment,{children:[(0,a.jsxs)(e.h2,{className:\"content-header\",id:\"overview\",children:[(0,a.jsx)(e.a,{\"aria-hidden\":\"true\",href:\"#overview\",tabIndex:\"-1\",children:(0,a.jsx)(a.Fragment,{children:(0,a.jsx)(e.span,{className:\"content-header-link\",children:(0,a.jsxs)(e.svg,{className:\"h-5 linkicon w-5\",fill:\"currentColor\",viewBox:\"0 0 20 20\",xmlns:\"http://www.w3.org/2000/svg\",children:[(0,a.jsx)(e.path,{d:\"M12.232 4.232a2.5 2.5 0 0 1 3.536 3.536l-1.225 1.224a.75.75 0 0 0 1.061 1.06l1.224-1.224a4 4 0 0 0-5.656-5.656l-3 3a4 4 0 0 0 .225 5.865.75.75 0 0 0 .977-1.138 2.5 2.5 0 0 1-.142-3.667l3-3Z\"}),(0,a.jsx)(e.path,{d:\"M11.603 7.963a.75.75 0 0 0-.977 1.138 2.5 2.5 0 0 1 .142 3.667l-3 3a2.5 2.5 0 0 1-3.536-3.536l1.225-1.224a.75.75 0 0 0-1.061-1.06l-1.224 1.224a4 4 0 1 0 5.656 5.656l3-3a4 4 0 0 0-.225-5.865Z\"})]})})})}),\"Overview\"]}),(0,a.jsx)(e.p,{children:\"Test\"})]})}function h(t={}){let{wrapper:e}=t.components||{};return e?(0,a.jsx)(e,{...t,children:(0,a.jsx)(d,{...t})}):d(t)}return _(j);})();\n;return Component;"
-        },
-        "_id": "blog/Test.mdx",
-        "_raw": {
-          "sourceFilePath": "blog/Test.mdx",
-          "sourceFileName": "Test.mdx",
-          "sourceFileDir": "blog",
-          "contentType": "mdx",
-          "flattenedPath": "blog/Test"
-        },
-        "type": "Blog",
-        "readingTime": {
-          "text": "1 min read",
-          "minutes": 0.015,
-          "time": 900,
-          "words": 3
-        },
-        "slug": "Test",
-        "path": "blog/Test",
-        "filePath": "blog/Test.mdx",
-        "toc": [
-          {
-            "value": "Overview",
-            "url": "#overview",
-            "depth": 2
-          }
-        ],
-        "structuredData": {
-          "@context": "https://schema.org",
-          "@type": "BlogPosting",
-          "headline": "Test",
-          "datePublished": "2024-11-28T06:55:00.000Z",
-          "dateModified": "2024-11-28T00:00:00.000Z",
-          "description": "Test",
-          "image": "/static/images/twitter-card.png",
-          "url": "https://tailwind-nextjs-starter-blog.vercel.app/blog/Test"
-        }
-      },
-      "documentHash": "1732776937192",
       "hasWarnings": false,
       "documentTypeName": "Blog"
     }
