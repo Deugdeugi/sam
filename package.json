@@ -30,6 +30,7 @@
 		"dist/*"
 	],
 	"dependencies": {
+		"next": "15.0.3",
 		"@enact/core": "^4.7.8",
 		"@enact/i18n": "^4.7.8",
 		"@enact/sandstone": "^2.7.12",
