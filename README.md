@@ -1,3 +1,6 @@
+※ How to deploy
+npm run deploy
+
 This project was bootstrapped with [@enact/cli](https://github.com/enactjs/cli).
 
 Below you will find some information on how to perform common tasks.
