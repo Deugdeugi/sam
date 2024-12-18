@@ -1,5 +1,9 @@
-※ How to deploy
-npm run deploy
+## How to deploy
+1. Execute enact pack-p
+2. Add .nojekyll file in the dist folder
+- https://stackoverflow.com/questions/64232071/gh-pages-script-cannot-commit-nojekyll-to-github
+- https://velog.io/@drypot/GitHub-Pages-No-Jekyll
+3. Execute npm run deploy
 
 This project was bootstrapped with [@enact/cli](https://github.com/enactjs/cli).
 
