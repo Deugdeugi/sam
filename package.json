@@ -15,8 +15,7 @@
 		"license": "enact license",
 		"test": "enact test",
 		"test-watch": "enact test --watch",
-		"predeploy": "npm run pack-p",
-    	"deploy": "gh-pages -d dist"
+    	"deploy": "gh-pages -d dist -t true"
 	},
 	"license": "UNLICENSED",
 	"private": true,
