@@ -16,8 +16,14 @@ import ri from '@enact/ui/resolution';
 import IconItem from '@enact/sandstone/IconItem';
 import KeyGuide from '@enact/sandstone/KeyGuide';
 
+import MyInfoPanel from './MyInfoPanel/MyInfoPanel';
+import {ToolTip, TooltipDecorator} from '@enact/sandstone/TooltipDecorator';
+
+const ToolTipButton = TooltipDecorator(Button);
+
 const MainPanel = (props) => {
 	const [tabIndex, setTabIndex] = useState(0);
+	const [pageIndex, setPageIndex] = useState(0);
 
 	const renderItem = ({index, ...rest}) => {
 		return (
@@ -31,12 +37,6 @@ const MainPanel = (props) => {
 						setTabIndex(index % 2);
 					}
 				}
-				// style={{
-				// 	width: '400px',
-				// 	height: '340px',
-				// 	position: 'absolute',
-				// 	padding: '10px 10px 10px 10px'
-				// }}
 				{...rest}
 				>
 				ImageItem Caption
@@ -52,12 +52,6 @@ const MainPanel = (props) => {
 				label="ImageItem label"
 				orientation="vertical"
 				src={'data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 200 200\' width=\'200\' height=\'200\'%3E%3Crect width=\'200\' height=\'200\' fill=\'%237ed31d\'%3E%3C/rect%3E%3Ctext x=\'50%25\' y=\'50%25\' dominant-baseline=\'middle\' text-anchor=\'middle\' font-size=\'36px\' fill=\'%23ffffff\'%3E200 X 200%3C/text%3E%3C/svg%3E'}
-				// style={{
-				// 	width: '360px',
-				// 	height: '240px',
-				// 	position: 'absolute',
-				// 	padding: '10px 10px 10px 10px'
-				// }}
 				{...rest}
 				>
 				ImageItem Caption
@@ -68,12 +62,6 @@ const MainPanel = (props) => {
 				label="ImageItem label"
 				orientation="vertical"
 				src={'data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 200 200\' width=\'200\' height=\'200\'%3E%3Crect width=\'100\' height=\'100\' fill=\'%237ed31d\'%3E%3C/rect%3E%3Ctext x=\'50%25\' y=\'50%25\' dominant-baseline=\'middle\' text-anchor=\'middle\' font-size=\'36px\' fill=\'%23ffffff\'%3E200 X 200%3C/text%3E%3C/svg%3E'}
-				// style={{
-				// 	width: '360px',
-				// 	height: '240px',
-				// 	position: 'absolute',
-				// 	padding: '10px 10px 10px 10px'
-				// }}
 				{...rest}
 			>
 				ImageItem Caption
@@ -82,33 +70,37 @@ const MainPanel = (props) => {
 	}
 
 	return (
-		<Panels /*index={tabIndex}*/>
+		<Panels 
+			index={pageIndex} 
+			onBack={
+				() => {
+					setPageIndex(pageIndex - 1);
+				}
+			}
+		>
 			<Panel {...props} >
 				<Header title="Hello world!" noCloseButton >
 					<slotAfter>
-						<Button
+						<ToolTipButton
 							backgroundOpacity='transparent'
 							style={{
 								minWidth: 0,
 								lineHeight: 0,
 								padding: '0 0.5rem'
 							}}
+							onClick={() => {
+								setPageIndex(pageIndex + 1);
+							}}
+							tooltipPosition="below center"
+							tooltipText="Who am I?"
 						>
+							
 							<Icon size="small">
 								info
-							</Icon>
-						</Button>
+							</Icon>	
+						</ToolTipButton>
 					</slotAfter>
 				</Header>
-				{/* <IconItem
-					background="#1b1b1b"
-					bordered
-					icon="usb"
-					label='sdfsfsdf'
-					style={{
-						//width: "50%"
-					 }}
-				/> */}
 				<div
 					style={{
 						height: "50%"
@@ -120,9 +112,6 @@ const MainPanel = (props) => {
 						itemRenderer={renderItem}
 						itemSize={{minWidth: 300, minHeight: 240}}
 						horizontalScrollbar='hidden'
-						style={{
-							//height: "50%"
-							}}
 					/>
 				</div>
 				<div style={{height: "2%"}}></div>
@@ -133,20 +122,16 @@ const MainPanel = (props) => {
 						backgroundColor: '#4C4C4C'
 					}}
 				>
-					{/* <div>sfsafsafsaf</div> */}
-					{/* <div style={{height: "5%"}}></div> */}
 					<VirtualGridList
 						direction="horizontal"
 						dataSize={10}
 						itemRenderer={renderSubItem}
 						itemSize={{minWidth: 150, minHeight: 150}}
 						horizontalScrollbar='hidden'
-						style={{
-							//height: "50%"
-							}}
 					/>
 				</div>
 			</Panel>
+			<MyInfoPanel />
 		</Panels>
 	);
 }
