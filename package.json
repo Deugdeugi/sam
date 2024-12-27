@@ -8,7 +8,8 @@
 	"scripts": {
 		"serve": "enact serve",
 		"pack": "enact pack",
-		"pack-p": "enact pack -p; cp ./.nojekyll ./dist",
+		"pack-p": "enact pack -p",
+		"postpack-p": "cp ./.nojekyll ./dist",
 		"watch": "enact pack --watch",
 		"clean": "enact clean",
 		"lint": "enact lint .",
