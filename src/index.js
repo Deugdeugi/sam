@@ -3,8 +3,14 @@ import {createRoot, hydrateRoot} from 'react-dom/client';
 
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import store from './store/store';
+import { Provider } from 'react-redux'
 
-const appElement = (<App />);
+const appElement = (
+	<Provider store={store}>
+		<App />
+	</Provider>
+);
 
 // In a browser environment, render instead of exporting
 if (typeof window !== 'undefined') {

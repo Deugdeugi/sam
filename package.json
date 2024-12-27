@@ -8,14 +8,14 @@
 	"scripts": {
 		"serve": "enact serve",
 		"pack": "enact pack",
-		"pack-p": "enact pack -p",
+		"pack-p": "enact pack -p; cp ./.nojekyll ./dist",
 		"watch": "enact pack --watch",
 		"clean": "enact clean",
 		"lint": "enact lint .",
 		"license": "enact license",
 		"test": "enact test",
 		"test-watch": "enact test --watch",
-    	"deploy": "gh-pages -d dist -t true"
+		"deploy": "gh-pages -d dist -t true"
 	},
 	"license": "UNLICENSED",
 	"private": true,
@@ -37,11 +37,13 @@
 		"@enact/sandstone": "^2.7.12",
 		"@enact/spotlight": "^4.7.8",
 		"@enact/ui": "^4.7.8",
+		"@reduxjs/toolkit": "^2.5.0",
 		"gh-pages": "6.1.0",
 		"ilib": "^14.19.0",
 		"prop-types": "^15.8.1",
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0",
+		"react-redux": "^9.2.0",
 		"web-vitals": "^3.5.0"
 	},
 	"devDependencies": {
