@@ -16,10 +16,10 @@ const BlogPanel = (props) => {
     }, [path]);
 
     const tabCollapse = useCallback((clicked) => {
-        if (clicked === 'tab' && !isTabCollapse) {
+        if ( ( clicked === 'tab' && !isTabCollapse ) || ( clicked === 'panel' && isTabCollapse ) ) {
             // 아무것도 하지 않음
         } else {
-            setIsTabCollapse((prev) => !prev);
+            setIsTabCollapse(prev => !prev);
         }
     }, [isTabCollapse]);
 
@@ -27,7 +27,8 @@ const BlogPanel = (props) => {
         setTabIndex(data.selected);
     }, []);
 
-    const handlePanelClick = useCallback(() => {
+    const handlePanelClick = useCallback((e) => {
+        e.stopPropagation();
         tabCollapse('panel');
     }, [tabCollapse]);
 
