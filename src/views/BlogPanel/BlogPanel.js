@@ -1,34 +1,64 @@
 import { Panel, Header } from '@enact/sandstone/Panels';
-import Image from '@enact/sandstone/Image';
-import {TabLayout, Tab} from '@enact/sandstone/TabLayout';
-import Button from '@enact/sandstone/Button';
-
-import { useSelector, useDispatch } from 'react-redux'
-import { decrement, increment } from '../../store/counterSlice';
+import { TabLayout, Tab } from '@enact/sandstone/TabLayout';
+import { useSelector } from 'react-redux';
+import { useCallback, useEffect, useState } from 'react';
 
 const BlogPanel = (props) => {
-    const count = useSelector((state) => state.counter.value)
-    const dispatch = useDispatch()
+    const [isTabCollapse, setIsTabCollapse] = useState(false);
+    const [tabIndex, setTabIndex] = useState(0);
+    const path = useSelector((state) => state.path);
+    const post = useSelector((state) => state.post);
 
-	return (
-        <Panel {...props} >
-            <Header title="BlogPanel?" noCloseButton ></Header>
-            <TabLayout>
-                <Tab title="Tab One">
-                    <Button onClick={() => dispatch(increment())}>
-                        +
-                    </Button>
-                    <Button onClick={() => dispatch(decrement())}>
-                        -
-                    </Button>
-                    {count}
-                </Tab>
-                <Tab title="Tab Two">
-                    sdfsafsaf
-                </Tab>
+    useEffect(() => {
+        if (path.param[path.value.length - 1]?.index !== undefined) {
+            setTabIndex(path.param[path.value.length - 1]?.index);
+        }
+    }, [path]);
+
+    const tabCollapse = useCallback((clicked) => {
+        if (clicked === 'tab' && !isTabCollapse) {
+            // 아무것도 하지 않음
+        } else {
+            setIsTabCollapse((prev) => !prev);
+        }
+    }, [isTabCollapse]);
+
+    const handleTabClick = useCallback((data) => {
+        setTabIndex(data.selected);
+    }, []);
+
+    const handlePanelClick = useCallback(() => {
+        tabCollapse('panel');
+    }, [tabCollapse]);
+
+    const handleTabLayoutClick = useCallback(() => {
+        tabCollapse('tab');
+    }, [tabCollapse]);
+
+    const RenderPost = () => {
+        return (
+            <TabLayout
+                index={tabIndex}
+                collapsed={isTabCollapse}
+                onClick={handleTabLayoutClick}
+            >
+                {post.value.map((p, index) => (
+                    <Tab title={p.itemName} key={index} onTabClick={handleTabClick}>
+                        <Panel onClick={handlePanelClick}>
+                            {p.data['1']}
+                        </Panel>
+                    </Tab>
+                ))}
             </TabLayout>
+        );
+    };
+
+    return (
+        <Panel {...props}>
+            <Header title={post.name} subtitle={post.label} noCloseButton />
+            {RenderPost()}
         </Panel>
-	);
-}
+    );
+};
 
 export default BlogPanel;

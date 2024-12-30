@@ -1,14 +1,17 @@
-import { useState } from 'react';
+import { useCallback } from 'react';
 import { Panels } from '@enact/sandstone/Panels';
 import panelMap from '../constants/panelMap';
 
 import { useSelector, useDispatch } from 'react-redux'
-import Button from '@enact/sandstone/Button';
-import { push, pop, reset } from '../store/path';
+import { pop } from '../store/path';
 
-const MainPanel = (props) => {
+const MainPanel = () => {
 	const path = useSelector((state) => state.path.value)
     const dispatch = useDispatch()
+
+	const pathPop = useCallback(() => {
+		dispatch(pop());
+	}, [dispatch]);
 
 	const renderChildren = () => {
 		const children = path.map(p => {
@@ -20,13 +23,9 @@ const MainPanel = (props) => {
 	}
 
 	return (
-		<Panels 
-			index={path.length - 1} 
-			onBack={
-				() => {
-					dispatch(pop());
-				}
-			}
+		<Panels
+			index={path.length - 1}
+			onBack={() => pathPop()}
 		>
 			{renderChildren()}
 		</Panels>

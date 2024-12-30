@@ -4,6 +4,7 @@ export const pathSlice = createSlice({
   name: 'path',
   initialState: {
     value: ['FirstPanel'],
+    param: [{FirstParam: 'FirstParam'}]
   },
   reducers: {
     push: (state, action) => {
@@ -12,13 +13,16 @@ export const pathSlice = createSlice({
       // which detects changes to a "draft state" and produces a brand new
       // immutable state based off those changes.
       // Also, no return statement is required from these functions.
-      state.value = [...state.value, action.payload]
+      state.value = [...state.value, action.payload.panel]
+      state.param = [...state.param, action.payload.param]
     },
     pop: (state) => {
       state.value = state.value.slice(0, state.value.length - 1);
+      state.param = state.param.slice(0, state.param.length - 1);
     },
     reset: (state) => {
       state.value = ['MainPanel']
+      state.param = []
     },
   },
 })

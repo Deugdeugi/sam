@@ -1,4 +1,4 @@
-import MainPanel from '../views/MainPanel';
+// import MainPanel from '../views/MainPanel';
 import {FirstPanel} from '../views/FirstPanel';
 import {MyInfoPanel} from '../views/MyInfoPanel';
 import {BlogPanel} from '../views/BlogPanel';

@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import { Panel, Header } from '@enact/sandstone/Panels';
 import Icon from '@enact/sandstone/Icon';
 import {VirtualGridList} from '@enact/sandstone/VirtualList';
@@ -6,60 +6,79 @@ import Button from '@enact/sandstone/Button';
 import {TooltipDecorator} from '@enact/sandstone/TooltipDecorator';
 import ImageItem from '@enact/sandstone/ImageItem';
 import { useSelector, useDispatch } from 'react-redux'
-import { push, pop, reset } from '../../store/path';
-import panelMap from '../../constants/panelMap';
+import { push } from '../../store/path';
+import { postSet } from '../../store/post';
 
 import { add } from '../../store/themelist';
 import themeList from '../../assets/builtin_theme.json';
+import flutterLogo from '../../assets/flutter_logo.png';
+import css from './FirstPanel.module.less';
 
 const ToolTipButton = TooltipDecorator(Button);
 
 const FirstPanel = (props) => {
-    const [tabIndex, setTabIndex] = useState(0);
-    const [items, setItems] = useState([]);
+    const [themeIndex, setThemeIndex] = useState(0);
     const themes = useSelector((state) => state.themeList.value);
     const dispatch = useDispatch()
 
     useEffect(() => {
         dispatch(add(themeList));
-    }, []);
+    }, [dispatch]);
+
+    const clickItem = useCallback((theme) => {
+        dispatch(push({
+            panel: 'BlogPanel',
+            param: {}
+        }));
+        dispatch(postSet(theme));
+    }, [dispatch]);
+
+    const clickSubItem = useCallback((index, theme) => {
+        dispatch(push({
+            panel: 'BlogPanel',
+            param: {
+                index: index
+            }
+        }));
+        dispatch(postSet(theme));
+    }, [dispatch]);
+
+    const handleThemeIndex = useCallback((index) => {
+        setThemeIndex(index);
+    }, [])
 
     const renderItem = ({index, ...rest}) => {
         const theme = themes[index];
 
         return (
             <ImageItem
+                className={css.item}
                 key={index}
                 index={index}
                 label={theme.label}
                 orientation="vertical"
-                src={'data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 300 300\' width=\'300\' height=\'300\'%3E%3Crect width=\'300\' height=\'300\' fill=\'%237ed31d\'%3E%3C/rect%3E%3Ctext x=\'50%25\' y=\'50%25\' dominant-baseline=\'middle\' text-anchor=\'middle\' font-size=\'36px\' fill=\'%23ffffff\'%3E300 X 300%3C/text%3E%3C/svg%3E'}
-                onClick={
-                    () => dispatch(push('BlogPanel'))
-                }
-                onFocus={
-                    () => {
-                        setTabIndex(index);
-                    }
-                }
+                src={theme.src}
+                onClick={() => clickItem(theme)}
+                onFocus={() => handleThemeIndex(index)}
                 {...rest}
                 >
                 {theme.name}
             </ImageItem>
         )
-    } 
+    }
 
 	const renderSubItem = ({index, ...rest}) => {
         return (
             <ImageItem
                 key={index}
                 index={index}
-                label={themes[tabIndex]?.info[index]?.itemLabel}
+                label={themes[themeIndex]?.info[index]?.itemLabel}
                 orientation="vertical"
-                src={'data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 200 200\' width=\'200\' height=\'200\'%3E%3Crect width=\'200\' height=\'200\' fill=\'%237ed31d\'%3E%3C/rect%3E%3Ctext x=\'50%25\' y=\'50%25\' dominant-baseline=\'middle\' text-anchor=\'middle\' font-size=\'36px\' fill=\'%23ffffff\'%3E200 X 200%3C/text%3E%3C/svg%3E'}
+                src={themes[themeIndex]?.info[index]?.src}
+                onClick={() => clickSubItem(index, themes[themeIndex])}
                 {...rest}
                 >
-                {themes[tabIndex]?.info[index]?.itemName}
+                {themes[themeIndex]?.info[index]?.itemName}
             </ImageItem>
         )
 	}
@@ -76,15 +95,17 @@ const FirstPanel = (props) => {
                             padding: '0 0.5rem'
                         }}
                         onClick={() => {
-                            dispatch(push('MyInfoPanel'))
+                            dispatch(push({
+                                panel: 'MyInfoPanel',
+                                param: {}
+                            }));
                         }}
                         tooltipPosition="below center"
                         tooltipText="Who am I?"
                     >
-                        
                         <Icon size="small">
                             info
-                        </Icon>	
+                        </Icon>
                     </ToolTipButton>
                 </slotAfter>
             </Header>
@@ -101,7 +122,7 @@ const FirstPanel = (props) => {
                     horizontalScrollbar='hidden'
                 />
             </div>
-            <div style={{height: "2%"}}></div>
+            <div style={{height: "2%"}} />
             <div
                 style={{
                     height: "40%",
@@ -111,7 +132,7 @@ const FirstPanel = (props) => {
             >
                 <VirtualGridList
                     direction="horizontal"
-                    dataSize={themeList.themes[tabIndex].info.length}
+                    dataSize={themeList.themes[themeIndex].info.length}
                     itemRenderer={renderSubItem}
                     itemSize={{minWidth: 150, minHeight: 150}}
                     horizontalScrollbar='hidden'
