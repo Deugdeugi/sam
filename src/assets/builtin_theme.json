@@ -3,7 +3,7 @@
 		{
 			"name": "Flutter 프로젝트",
 			"label": "Flutter",
-			"src": "sam/src/assets/flutter_logo.png",
+			"src": "src/assets/flutter_logo.png",
 			"info": [
 				{
 					"itemName": "1", "itemLabel": "1",
