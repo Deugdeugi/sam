@@ -1,6 +1,34 @@
 {
 	"themes": [
 		{
+			"name": "React 프로젝트",
+			"label": "React",
+			"src": "src/assets/react_logo.png",
+			"info": [
+				{
+					"itemName": "1", "itemLabel": "1",
+					"data": {
+						"1": 2,
+						"2": 3
+					}
+				},
+				{
+					"itemName": "2", "itemLabel": "2",
+					"data": {
+						"1": 22,
+						"2": 33
+					}
+				},
+				{
+					"itemName": "3", "itemLabel": "3",
+					"data": {
+						"1": 221,
+						"2": 331
+					}
+				}
+			]
+		},
+		{
 			"name": "Flutter 프로젝트",
 			"label": "Flutter",
 			"src": "src/assets/flutter_logo.png",
