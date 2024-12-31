@@ -7,11 +7,45 @@
 			"info": [
 				{
 					"itemName": "포트폴리오", "itemLabel": "24. 12. 17",
+					"intro": "개인 프로젝트 소개를 위한 프로젝트입니다.",
 					"src": "src/assets/portfolio.png",
-					"data": {
-						"1": 2,
-						"2": 3
-					}
+					"details": [
+						"개발 프로젝트를 갤러리 형식으로 표시하고 설명"
+					],
+					"techData": [
+						{
+							"tech": "React",
+							"detail": "testdetail1"
+						},
+						{
+							"tech": "Enact & Sandstone",
+							"detail": "testdetail2"
+						},
+						{
+							"tech": "Github",
+							"detail": "testdetail2"
+						}
+					]
+				},
+				{
+					"itemName": "mock", "itemLabel": "24. 12. 17",
+					"intro": "mock 프로젝트입니다.",
+					"src": "",
+					"details": [
+						"1111111111111",
+						"2222222222222",
+						"3333333333333"
+					],
+					"techData": [
+						{
+							"tech": "mock1",
+							"detail": "mock1"
+						},
+						{
+							"tech": "mock2",
+							"detail": "mock2"
+						}
+					]
 				}
 			]
 		},
@@ -20,6 +54,26 @@
 			"label": "Flutter",
 			"src": "src/assets/flutter_logo.png",
 			"info": [
+				{
+					"itemName": "mock", "itemLabel": "24. 12. 17",
+					"intro": "mock 프로젝트입니다.",
+					"src": "",
+					"details": [
+						"1111111111111",
+						"2222222222222",
+						"3333333333333"
+					],
+					"techData": [
+						{
+							"tech": "mock1",
+							"detail": "mock1"
+						},
+						{
+							"tech": "mock2",
+							"detail": "mock2"
+						}
+					]
+				}
 			]
 		}
 	]

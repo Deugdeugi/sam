@@ -1,5 +1,6 @@
 import { Panel, Header } from '@enact/sandstone/Panels';
 import Image from '@enact/sandstone/Image';
+import BodyText from '@enact/sandstone/BodyText';
 
 const MyInfoPanel = (props) => {
 	return (
@@ -18,6 +19,8 @@ const MyInfoPanel = (props) => {
                     border: '#ffa500 dashed 1px'
                 }}
             />
+            <div style={{height: "1.5rem"}} />
+            <BodyText>"Who am I?"</BodyText>
         </Panel>
 	);
 }

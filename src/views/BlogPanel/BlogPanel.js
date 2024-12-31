@@ -4,9 +4,15 @@ import { useSelector } from 'react-redux';
 import { useCallback, useEffect, useState } from 'react';
 import ImageItem from '@enact/sandstone/ImageItem'
 import Scroller from '@enact/sandstone/Scroller';
+import BodyText from '@enact/sandstone/BodyText';
+import css from './BlogPanel.module.less';
+import Button from '@enact/sandstone/Button';
+import DetailPopup from '../DetailPopup/DetailPopup';
 
 const BlogPanel = (props) => {
     const [tabIndex, setTabIndex] = useState(0);
+    const [detail, setDetail] = useState({});
+    const [detailOpen, setDetailOpen] = useState(false);
     const path = useSelector((state) => state.path);
     const post = useSelector((state) => state.post);
 
@@ -20,7 +26,35 @@ const BlogPanel = (props) => {
         setTabIndex(data.selected);
     }, []);
 
-    console.log("post", post);
+    const RenderTechStack = (techStack) => {
+        const Component = techStack.map((d, index) => {
+            return (
+                <Button key={index} size='small'
+                    onClick={
+                        () => {
+                            setDetail(
+                                {
+                                    subject: d.tech,
+                                    detail: d.detail,
+                                }
+                            );
+                            setDetailOpen(true);
+                        }
+                    }
+                >{d.tech}</Button>
+            )
+        })
+        return Component;
+    }
+
+    const RenderDetails = (details) => {
+        const Component = details.map((d, index) => {
+            return (
+                <BodyText key={index} className={css.detail}>● {d}</BodyText>
+            )
+        })
+        return Component;
+    }
 
     const RenderPost = () => {
         return (
@@ -31,20 +65,45 @@ const BlogPanel = (props) => {
                     <Tab title={p.itemName} key={index} onTabClick={handleTabClick}>
                         <Panel>
                             <Scroller
-                                focusableScrollbar={true}
+                                focusableScrollbar
                             >
-                                <ImageItem
-                                    label={p.itemLabel}
-                                    orientation="vertical"
-                                    src={p.src}
-                                    style={{
-                                        height: '12.25rem',
-                                        position: 'absolute',
-                                        width: '16rem'
-                                    }}
-                                >
-                                    {p.itemName}
-                                </ImageItem>
+                                <div>
+                                    <ImageItem
+                                        label={p.itemLabel}
+                                        orientation="vertical"
+                                        src={p.src}
+                                        style={{
+                                            height: '12.25rem',
+                                            width: '16rem'
+                                        }}
+                                    >
+                                        {p.itemName}
+                                    </ImageItem>
+                                    <div style={{height: "1rem"}} />
+
+                                    <BodyText className={css.subject}>1. 소개</BodyText>
+                                    <BodyText className={css.detail}>{p.intro}</BodyText>
+
+                                    <div style={{height: "1.5rem"}} />
+
+                                    <BodyText className={css.subject}>2. 기술 스택</BodyText>
+                                    {RenderTechStack(p.techData)}
+
+                                    <div style={{height: "2.5rem"}} />
+
+                                    <BodyText className={css.subject}>3. 기능</BodyText>
+                                    {RenderDetails(p.details)}
+
+                                    <div style={{height: "1.5rem"}} />
+                                    <DetailPopup
+                                        open={detailOpen}
+                                        onClose={() => {
+                                            setDetail({});
+                                            setDetailOpen(false);
+                                        }}
+                                        {...detail}
+                                    />
+                                </div>
                             </Scroller>
                         </Panel>
                     </Tab>
@@ -55,7 +114,7 @@ const BlogPanel = (props) => {
 
     return (
         <Panel {...props}>
-            <Header title={post.name} subtitle={post.label} noCloseButton />
+            <Header title={post.value[tabIndex].itemName} subtitle={post.name} noCloseButton />
             {RenderPost()}
         </Panel>
     );
