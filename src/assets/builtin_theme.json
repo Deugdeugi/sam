@@ -7,6 +7,7 @@
 			"info": [
 				{
 					"itemName": "포트폴리오", "itemLabel": "24. 12. 17",
+					"src": "src/assets/portfolio.png",
 					"data": {
 						"1": 2,
 						"2": 3

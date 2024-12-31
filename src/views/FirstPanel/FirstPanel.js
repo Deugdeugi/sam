@@ -13,6 +13,7 @@ import { add } from '../../store/themelist';
 import themeList from '../../assets/builtin_theme.json';
 import flutterLogo from '../../assets/flutter_logo.png';
 import reactLogo from '../../assets/react_logo.png';
+import portfolioImage from '../../assets/portfolio.png';
 import css from './FirstPanel.module.less';
 
 const ToolTipButton = TooltipDecorator(Button);
