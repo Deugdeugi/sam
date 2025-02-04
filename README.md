@@ -1,5 +1,5 @@
 ## How to deploy
-1. Execute enact pack-p
+1. Execute npm run pack-p
 2. Add .nojekyll file in the dist folder
 - https://stackoverflow.com/questions/64232071/gh-pages-script-cannot-commit-nojekyll-to-github
 - https://velog.io/@drypot/GitHub-Pages-No-Jekyll
