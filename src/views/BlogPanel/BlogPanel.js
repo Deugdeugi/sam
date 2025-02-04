@@ -26,6 +26,12 @@ const BlogPanel = (props) => {
         setTabIndex(data.selected);
     }, []);
 
+    const handleOnClick = useCallback((itemLabel, isLabelLink) => {
+        if ( isLabelLink ) {
+            window.open(itemLabel);
+        }
+    }, []);
+
     const RenderTechStack = (techStack) => {
         const Component = techStack.map((d, index) => {
             return (
@@ -72,6 +78,7 @@ const BlogPanel = (props) => {
                                         label={p.itemLabel}
                                         orientation="vertical"
                                         src={p.src}
+                                        onClick={() => handleOnClick(p.itemLabel, p.isLabelLink)}
                                         style={{
                                             height: '12.25rem',
                                             width: '16rem'
